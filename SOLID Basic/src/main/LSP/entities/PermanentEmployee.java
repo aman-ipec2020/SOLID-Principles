@@ -1,0 +1,25 @@
+package main.LSP.entities;
+
+public class PermanentEmployee extends Employee {
+
+	public PermanentEmployee() {	}
+	public PermanentEmployee(String id, String name, float salary) {
+		super(id,name);
+		this.salary = salary;
+	}
+	
+	@Override
+	public float calculateBonus(float salary)	{
+			return (salary * 10)/100;
+	}
+	
+	@Override
+	public float getSalary() {
+		return this.salary;
+	}
+	
+	@Override
+	public String toString() {
+		return "PermanentEmployee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+	}
+}
